@@ -1,3 +1,5 @@
+type: DeclarativeSource
+version: 0.51.1
 spec:
   type: Spec
   documentation_url: https://example.org
@@ -13,11 +15,6 @@ spec:
         title: API Key
         airbyte_secret: true
     additionalProperties: true
-type: DeclarativeSource
-check:
-  type: CheckStream
-  stream_names:
-    - surveys
 streams:
   - name: surveys
     type: DeclarativeStream
@@ -919,7 +916,10 @@ streams:
             type:
               - 'null'
               - string
-version: 0.51.1
+check:
+  type: CheckStream
+  stream_names:
+    - surveys
 metadata:
   autoImportSchema:
     review: true
