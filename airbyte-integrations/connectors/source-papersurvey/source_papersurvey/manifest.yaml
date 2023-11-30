@@ -227,7 +227,7 @@ streams:
           inject_into: request_parameter
         pagination_strategy:
           type: PageIncrement
-          page_size: 500
+          page_size: 100
           start_from_page: 1
       requester:
         path: https://api.papersurvey.io/surveys/{{stream_partition.survey}}/review
@@ -552,7 +552,7 @@ streams:
           inject_into: request_parameter
         pagination_strategy:
           type: PageIncrement
-          page_size: 500
+          page_size: 100
           start_from_page: 1
       requester:
         path: https://api.papersurvey.io/surveys/{{stream_partition.survey}}/entries
